@@ -1,1 +1,202 @@
-# Cuentosinteractivos
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuento Interactivo</title>
+
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente divertida */
+            background-color: #ffeb3b; /* Fondo amarillo brillante */
+            text-align: center;
+            padding: 40px;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Contenedor superior de la sección del cuento */
+        #intro {
+            background-color: #ff4081; /* Rosa brillante para la parte superior */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 48px;
+            color: white; /* Texto blanco para resaltar sobre el fondo rosa */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto para resaltar */
+        }
+
+        /* Estilo del párrafo */
+        #intro p {
+            font-size: 18px;
+            color: white;
+        }
+
+        /* Estilo de los botones de control de audio */
+        .audio-control {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .audio-control button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Botón Play (Verde) */
+        .play-btn {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+
+        .play-btn:hover {
+            background-color: #45a049; /* Verde oscuro */
+            transform: scale(1.1); /* Efecto de agrandar */
+        }
+
+        /* Botón Stop (Rojo) */
+        .stop-btn {
+            background-color: #f44336; /* Rojo */
+            color: white;
+        }
+
+        .stop-btn:hover {
+            background-color: #e53935; /* Rojo más oscuro */
+            transform: scale(1.1); /* Efecto de agrandar */
+        }
+
+        /* Botón Rebobinar (Blanco) */
+        .rewind-btn {
+            background-color: white; /* Blanco */
+            color: #333;
+            border: 2px solid #4CAF50; /* Borde verde */
+        }
+
+        .rewind-btn:hover {
+            background-color: #f1f1f1; /* Blanco grisáceo */
+            transform: scale(1.1); /* Efecto de agrandar */
+        }
+
+        /* Estilos para el área del cuento */
+        #cuento {
+            width: 90%;
+            max-width: 600px;
+            height: 150px;
+            font-size: 18px;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            background-color: #80deea; /* Fondo azul claro para el área de cuento */
+            color: #333;
+            border: 2px solid #ff4081; /* Borde rosa */
+            overflow-y: scroll;
+            margin-bottom: 20px;
+            white-space: pre-wrap; /* Respetar saltos de línea */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        /* Media queries para hacerlo responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            .audio-control button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+            #cuento {
+                font-size: 16px;
+                height: 130px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+            .audio-control button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            #cuento {
+                font-size: 14px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección superior con título y descripción -->
+    <div id="intro">
+        <h1>Cuento Interactivo</h1>
+        <p>El misterio de las estrellas perdidas</p>
+    </div>
+
+    <!-- Contenedor donde puedes agregar el texto del cuento -->
+    <div id="cuento">
+        En el pueblo de Lumina, las noches siempre brillaban con miles de estrellas. Sin embargo, una noche, los habitantes miraron al cielo y descubrieron algo extraño: las estrellas habían desaparecido.
+
+—¡Alguien se ha llevado las estrellas ! —gritó Sara, una niña curiosa de 8 años.
+
+Decidida a resolver el misterio, Sara tomó su linterna mágica y llamó a su mejor amigo, Max, un mapache muy astuto. Juntos emprendieron una aventura por el bosque oscuro, guiándose por los sonidos de la noche.
+
+En su camino encontraron tres pistas:
+	1.	Una huella gigante marcada en el suelo.
+	2.	Un destello brillante atrapado en una telaraña.
+	3.	El eco de una risa misteriosa proveniente del lago.
+
+Cada pista los acercaba al culpable: una nube traviesa llamada Nimbus, que había atrapado las estrellas para jugar con ellas.
+
+—¡Nimbus! —dijo Sara con valentía—. Las estrellas no te pertenecen. ¡Son para iluminar nuestras noches!
+
+Nimbus se sintió mal al escuchar a Sara.
+—Lo siento, solo quería jugar porque me siento solo en el cielo.
+
+Sara tuvo una idea.
+—Podemos visitarte todas las noches y contarte historias. Pero, por favor, devuelve las estrellas.
+
+Nimbus aceptó felizmente y agitó sus esponjosas manos. En un instante, las estrellas volvieron al cielo, más brillantes que nunca.
+
+Desde entonces, Sara y Max se reunían cada noche para contar cuentos a Nimbus, y las estrellas nunca volvieron a desaparecer
+    </div>
+
+    <!-- Controles de audio -->
+    <div class="audio-control">
+        <button class="play-btn" onclick="playAudio()">Inicio</button>
+        <button class="stop-btn" onclick="pauseAudio()">Pausa</button>
+        <button class="rewind-btn" onclick="rewindAudio()">Rebobinar</button>
+    </div>
+
+    <!-- Archivo de audio -->
+    <audio id="cuentoAudio" src="cuento.mp3"></audio>
+
+    <script>
+        const audio = document.getElementById("cuentoAudio");
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function rewindAudio() {
+            audio.currentTime = 0; // Rebobina el audio al inicio
+            audio.play(); // Vuelve a reproducirlo
+        }
+    </script>
+</body>
+</html>
